@@ -3,7 +3,7 @@ BEGIN {
   $Text::Zilla::Dir::DBIC::ResultSet::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Text::Zilla::Dir::DBIC::ResultSet::VERSION = '0.001';
+  $Text::Zilla::Dir::DBIC::ResultSet::VERSION = '0.002';
 }
 # ABSTRACT: Generate a directory based on a L<DBIx::Class::ResultSet>
 
@@ -28,13 +28,14 @@ sub generate_tzil_entries {
 	my ( $self, $resultset ) = @_;
 
 	my @pri_cols = $resultset->result_source->primary_columns;
+	my @cols = $resultset->result_source->columns;
 	
 	my %entries;
 
-	my $rs = $resultset->search;
-	$rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
+	my $rs = $resultset->search ({}, { columns => \@cols });
 	
-	while (my $data = $rs->next) {
+	while (my @row = $rs->cursor->next) {
+		my $data = { map { $_ => shift @row } @cols };
 		my @pri_vals;
 		for (@pri_cols) {
 			push @pri_vals, $data->{$_};
@@ -57,7 +58,7 @@ Text::Zilla::Dir::DBIC::ResultSet - Generate a directory based on a L<DBIx::Clas
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 AUTHOR
 

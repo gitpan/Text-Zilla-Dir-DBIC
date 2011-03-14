@@ -1,4 +1,8 @@
 Revision history for Text-Zilla-Dir-DBIC
 
+0.002     2011-03-14 02:04:19 Europe/Berlin
+	- Optimized way to get the hash from the resultset (ribasushi++)
+	- Fixed missing minimum requirement for SQL::Translator to use deploy (cpantesters++)
+
 0.001     2011-03-12 05:48:01 Europe/Berlin
 	- First release, minimum features

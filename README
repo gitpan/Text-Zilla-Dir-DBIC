@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Text-Zilla-Dir-DBIC,
-version 0.001:
+version 0.002:
 
   Generate a directory based on a L<DBIx::Class::Schema>
 

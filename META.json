@@ -30,14 +30,22 @@
          "requires" : {
             "DBD::SQLite" : "1.31",
             "File::Temp" : "0.22",
+            "SQL::Translator" : "0.11006",
             "Test::Dirs" : "0.03",
             "Test::More" : "0.96"
          }
       }
    },
    "release_status" : "stable",
-   "resources" : {},
-   "version" : "0.001",
+   "resources" : {
+      "homepage" : "http://github.com/Getty/p5-text-zilla-dir-dbic/tree",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Getty/p5-text-zilla-dir-dbic.git",
+         "web" : "http://github.com/Getty/p5-text-zilla-dir-dbic/tree"
+      }
+   },
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

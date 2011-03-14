@@ -14,6 +14,7 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'DBD::SQLite' => '1.31',
     'File::Temp' => '0.22',
+    'SQL::Translator' => '0.11006',
     'Test::Dirs' => '0.03',
     'Test::More' => '0.96'
   },
@@ -29,7 +30,7 @@ my %WriteMakefileArgs = (
     'JSON' => '2.51',
     'Text::Zilla' => '0.002'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

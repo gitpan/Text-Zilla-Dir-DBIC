@@ -3,7 +3,7 @@ BEGIN {
   $Text::Zilla::Dir::DBIC::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Text::Zilla::Dir::DBIC::VERSION = '0.001';
+  $Text::Zilla::Dir::DBIC::VERSION = '0.002';
 }
 # ABSTRACT: Generate a directory based on a L<DBIx::Class::Schema>
 
@@ -48,7 +48,7 @@ Text::Zilla::Dir::DBIC - Generate a directory based on a L<DBIx::Class::Schema>
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 AUTHOR
 
